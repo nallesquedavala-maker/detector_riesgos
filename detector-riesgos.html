@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07120d" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="Actividad interactiva para identificar riesgos en respuestas generadas por inteligencia artificial." />
+    <title>Auditoría de respuestas de inteligencia artificial</title>
+    <link rel="stylesheet" href="detector-riesgos.css" />
+  </head>
+  <body>
+    <div class="risk-shell">
+      <header class="risk-topbar">
+        <div class="risk-brand"><span class="risk-brand-mark">A</span><span>Auditoría de respuestas</span></div>
+        <div id="riskSessionStatus" class="risk-session-status">Actividad protegida</div>
+      </header>
+      <main id="riskApp" class="risk-app" aria-live="polite"></main>
+    </div>
+
+    <template id="accessTemplate">
+      <section class="access-layout">
+        <div class="access-intro">
+          <p class="risk-eyebrow">Bloque 3 · Curaduría de información</p>
+          <h1>Una respuesta convincente también puede fallar.</h1>
+          <p>Auditen cuatro respuestas como si fueran a incorporarse en un informe profesional. En cada una les asignaremos un riesgo: su tarea es localizar la frase exacta donde ocurre. Tendrán un solo intento por riesgo y verán los aciertos y las explicaciones al finalizar la actividad. Selecciona tu equipo de la lista ya registrada en el taller; tu calificación se guardará como Desafío 2.</p>
+          <div class="access-facts" aria-label="Características de la actividad">
+            <span>4 respuestas</span><span>11 hallazgos</span><span>1 reto final</span>
+          </div>
+        </div>
+        <form id="accessForm" class="access-card">
+          <p class="risk-eyebrow">Acceso a la actividad</p>
+          <h2>Ingresar al detector</h2>
+          <label for="sessionCode">Código de sesión</label>
+          <input id="sessionCode" name="sessionCode" maxlength="20" autocomplete="off" placeholder="Código de tu sesión" value="UTEL2026" required />
+          <label for="accessCode">Código de acceso</label>
+          <input id="accessCode" name="accessCode" maxlength="20" autocomplete="off" placeholder="Escribe el código" required />
+          <button class="risk-primary-button" type="submit">Buscar mi equipo</button>
+          <p id="accessError" class="risk-error" role="alert"></p>
+          <button type="button" id="leaderboardLink" class="risk-link-button">Ver tabla de posiciones</button>
+        </form>
+      </section>
+    </template>
+
+    <script type="module" src="detector-riesgos.js"></script>
+  </body>
+</html>
