@@ -26,7 +26,7 @@ async function initFirebase() {
 }
 
 export function cleanSessionCode(value) {
-  return String(value || "UTEL2026").toUpperCase().replace(/[^A-Z0-9_-]/g, "").slice(0, 20) || "UTEL2026";
+  return String(value || "UTEL0905").toUpperCase().replace(/[^A-Z0-9_-]/g, "").slice(0, 20) || "UTEL0905";
 }
 
 function localKey(session) {
